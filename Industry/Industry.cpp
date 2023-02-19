@@ -88,12 +88,6 @@ private:
     float p;
     float sides[4];
     float d1, d2;
-
-    float angle(float a, float b, float d) {
-        float temp = a * a + b * b - d * d;
-        temp = temp / (2 * a * b);
-        return acos(temp);
-    }
 public:
     Figure() {};
     Figure(float x1, float x2, float x3, float x4, 
@@ -157,7 +151,7 @@ public:
     bool is_square() {
         return (is_romb() && is_prug());
     }
-    bool is_in_circle() {
+    bool is_in_circle() { // May works wrong because of rounding irrational values
         return (d1 * d2 == sides[0] * sides[2] + sides[1] * sides[3]);
     }
     bool is_out_circle() {
@@ -165,28 +159,28 @@ public:
     }
 };
 
-void main1()
+void task1()
 {
-    setlocale(LC_ALL, "Russian");
     Triangle arr[3];
     for (int i = 0; i < 3; i++) {
         double a, b, c;
         cout << "Введите 3 стороны " << i + 1 << "-го треугольника:" << endl;
         cin >> a >> b >> c;
         arr[i].set(a, b, c);
-        if (!arr[i].exst_tr()) {
-            arr[i].set(0, 0, 0);
+        while (!arr[i].exst_tr()) {
+            cout << "Такой треугольник не существует, Введите 3 стороны " << i + 1 << "-го треугольника снова:" << endl;
+            cin >> a >> b >> c;
+            arr[i].set(a, b, c);
         }
     }
 
     for (int i = 0; i < 3; i++) {
         arr[i].show();
-        cout << "Периметр: " << arr[i].perimetr() << endl << "Площадь" << arr[i].square() << endl;
+        cout << "Периметр: " << arr[i].perimetr() << endl << "Площадь: " << arr[i].square() << endl;
     }
 }
 
-void main2() {
-    setlocale(LC_ALL, "Russian");
+void task2() {
     Circle arr[3];
     for (int i = 0; i < 2; i++) {
         cout << "Введите радиус и координаты центра окружности:" << endl;
@@ -205,8 +199,7 @@ void main2() {
     cout << "Первая и вторая окружности пересекаются: " << arr[0].check_circle(arr[1].getRadius(), arr[1].getX_centre(), arr[1].getY_centre()) << endl;
 }
 
-void main() {
-    setlocale(LC_ALL, "Russian");
+void task3() {
     Figure arr[3];
     for (int i = 0; i < 3; i++) {
         float x1, y1, x2, y2, x3, y3, x4, y4;
@@ -237,5 +230,12 @@ void main() {
 
         cout << endl;
     }
+}
 
+int main() {
+    setlocale(LC_ALL, "Russian");
+    // Functions below runs corresponding task, just decomment it
+//    task1();
+//    task2();
+//    task3();
 }
