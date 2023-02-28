@@ -159,83 +159,83 @@ public:
     }
 };
 
-void task1()
-{
-    Triangle arr[3];
-    for (int i = 0; i < 3; i++) {
-        double a, b, c;
-        cout << "Введите 3 стороны " << i + 1 << "-го треугольника:" << endl;
-        cin >> a >> b >> c;
-        arr[i].set(a, b, c);
-        while (!arr[i].exst_tr()) {
-            cout << "Такой треугольник не существует, Введите 3 стороны " << i + 1 << "-го треугольника снова:" << endl;
-            cin >> a >> b >> c;
-            arr[i].set(a, b, c);
-        }
-    }
-
-    for (int i = 0; i < 3; i++) {
-        arr[i].show();
-        cout << "Периметр: " << arr[i].perimetr() << endl << "Площадь: " << arr[i].square() << endl;
-    }
-}
-
-void task2() {
-    Circle arr[3];
-    for (int i = 0; i < 2; i++) {
-        cout << "Введите радиус и координаты центра окружности:" << endl;
-        float r, x, y;
-        cin >> r >> x >> y;
-        arr[i] = Circle(r, x, y);
-    }
-    cout << "Введите радиус и координаты центра окружности:" << endl;
-    float r, x, y;
-    cin >> r >> x >> y;
-    arr[2].set_circle(r, x, y);
-
-    cout << "Площадь первой окружностью: " << arr[0].square() << endl;
-    cout << "Вторую окружность можно вписать в треугольник со сторонами 3, 4, 5: " << arr[1].triangle_around(3, 4, 5) << endl;
-    cout << "В третью окружность можно вписать треугольник со сторонами 3, 4, 5: " << arr[2].triangle_in(3, 4, 5) << endl;
-    cout << "Первая и вторая окружности пересекаются: " << arr[0].check_circle(arr[1].getRadius(), arr[1].getX_centre(), arr[1].getY_centre()) << endl;
-}
-
-void task3() {
-    Figure arr[3];
-    for (int i = 0; i < 3; i++) {
-        float x1, y1, x2, y2, x3, y3, x4, y4;
-        cout << "Четырехугольник номер " << i + 1 << ":\n";
-
-        cout << "Введите координаты первой точки(x, y): " << endl;
-        cin >> x1 >> y1;
-        cout << "Введите координаты первой точки(x, y): " << endl;
-        cin >> x2 >> y2;
-        cout << "Введите координаты первой точки(x, y): " << endl;
-        cin >> x3 >> y3;
-        cout << "Введите координаты первой точки(x, y): " << endl;
-        cin >> x4 >> y4;
-
-        arr[i] = Figure(x1, x2, x3, x4, y1, y2, y3, y4);
-        cout << endl;
-    }
-
-    cout << endl << endl;
-    for (int i = 0; i < 3; i++) {
-        cout << "Четырехугольник номер " << i + 1 << ":\n";
-        arr[i].show();
-        cout << "Прямоугольник: " << arr[i].is_prug() << endl;
-        cout << "Ромб: " << arr[i].is_romb() << endl;
-        cout << "Квадрат: " << arr[i].is_square() << endl;
-        cout << "Описанная окружность: " << arr[i].is_in_circle() << endl;
-        cout << "Вписанная окружность: " << arr[i].is_square() << endl;
-
-        cout << endl;
-    }
-}
-
-int main() {
-    setlocale(LC_ALL, "Russian");
-    // Functions below runs corresponding task, just decomment it
-//    task1();
-//    task2();
-//    task3();
-}
+//void task1()
+//{
+//    Triangle arr[3];
+//    for (int i = 0; i < 3; i++) {
+//        double a, b, c;
+//        cout << "Введите 3 стороны " << i + 1 << "-го треугольника:" << endl;
+//        cin >> a >> b >> c;
+//        arr[i].set(a, b, c);
+//        while (!arr[i].exst_tr()) {
+//            cout << "Такой треугольник не существует, Введите 3 стороны " << i + 1 << "-го треугольника снова:" << endl;
+//            cin >> a >> b >> c;
+//            arr[i].set(a, b, c);
+//        }
+//    }
+//
+//    for (int i = 0; i < 3; i++) {
+//        arr[i].show();
+//        cout << "Периметр: " << arr[i].perimetr() << endl << "Площадь: " << arr[i].square() << endl;
+//    }
+//}
+//
+//void task2() {
+//    Circle arr[3];
+//    for (int i = 0; i < 2; i++) {
+//        cout << "Введите радиус и координаты центра окружности:" << endl;
+//        float r, x, y;
+//        cin >> r >> x >> y;
+//        arr[i] = Circle(r, x, y);
+//    }
+//    cout << "Введите радиус и координаты центра окружности:" << endl;
+//    float r, x, y;
+//    cin >> r >> x >> y;
+//    arr[2].set_circle(r, x, y);
+//
+//    cout << "Площадь первой окружностью: " << arr[0].square() << endl;
+//    cout << "Вторую окружность можно вписать в треугольник со сторонами 3, 4, 5: " << arr[1].triangle_around(3, 4, 5) << endl;
+//    cout << "В третью окружность можно вписать треугольник со сторонами 3, 4, 5: " << arr[2].triangle_in(3, 4, 5) << endl;
+//    cout << "Первая и вторая окружности пересекаются: " << arr[0].check_circle(arr[1].getRadius(), arr[1].getX_centre(), arr[1].getY_centre()) << endl;
+//}
+//
+//void task3() {
+//    Figure arr[3];
+//    for (int i = 0; i < 3; i++) {
+//        float x1, y1, x2, y2, x3, y3, x4, y4;
+//        cout << "Четырехугольник номер " << i + 1 << ":\n";
+//
+//        cout << "Введите координаты первой точки(x, y): " << endl;
+//        cin >> x1 >> y1;
+//        cout << "Введите координаты первой точки(x, y): " << endl;
+//        cin >> x2 >> y2;
+//        cout << "Введите координаты первой точки(x, y): " << endl;
+//        cin >> x3 >> y3;
+//        cout << "Введите координаты первой точки(x, y): " << endl;
+//        cin >> x4 >> y4;
+//
+//        arr[i] = Figure(x1, x2, x3, x4, y1, y2, y3, y4);
+//        cout << endl;
+//    }
+//
+//    cout << endl << endl;
+//    for (int i = 0; i < 3; i++) {
+//        cout << "Четырехугольник номер " << i + 1 << ":\n";
+//        arr[i].show();
+//        cout << "Прямоугольник: " << arr[i].is_prug() << endl;
+//        cout << "Ромб: " << arr[i].is_romb() << endl;
+//        cout << "Квадрат: " << arr[i].is_square() << endl;
+//        cout << "Описанная окружность: " << arr[i].is_in_circle() << endl;
+//        cout << "Вписанная окружность: " << arr[i].is_square() << endl;
+//
+//        cout << endl;
+//    }
+//}
+//
+//int main() {
+//    setlocale(LC_ALL, "Russian");
+////    Functions below runs corresponding task, just decomment it
+////    task1();
+////    task2();
+////    task3();
+//}

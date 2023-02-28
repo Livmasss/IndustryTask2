@@ -127,13 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Circle.cpp" />
-    <ClCompile Include="Industry.cpp" />
-    <ClCompile Include="Triangle.cpp" />
+    <ClCompile Include="eq2.cpp" />
+    <ClCompile Include="Practice2.cpp" />
+    <ClCompile Include="Practice3.cpp" />
+    <ClCompile Include="rational.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Circle.h" />
-    <ClInclude Include="Triangle.h" />
+    <ClInclude Include="eq2.h" />
+    <ClInclude Include="rational.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

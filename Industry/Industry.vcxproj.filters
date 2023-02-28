@@ -15,21 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Industry.cpp">
+    <ClCompile Include="Practice2.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Triangle.cpp">
+    <ClCompile Include="Practice3.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Circle.cpp">
+    <ClCompile Include="eq2.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="rational.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Circle.h">
+    <ClInclude Include="eq2.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Triangle.h">
+    <ClInclude Include="rational.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
